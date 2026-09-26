@@ -1,10 +1,7 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class hw1 {
     public static void main(String[] args) {
-        Map<String, Integer> bankValue = new HashMap<>();
 
+        MyHashMap<String, Integer> bankValue = new MyHashMap<>();
 
         bankValue.put("Алексей", 100000);
         bankValue.put("Марат", 150000);
@@ -16,6 +13,7 @@ public class hw1 {
         Integer alexeiRemoved = bankValue.remove("Алексей");
         System.out.println("Удалено значение: " + alexeiRemoved);
 
-        System.out.println("Карта после удаления: " + bankValue);
+        System.out.println("Счёт Алексея после удаления: "
+                + bankValue.get("Алексей"));
     }
 }
